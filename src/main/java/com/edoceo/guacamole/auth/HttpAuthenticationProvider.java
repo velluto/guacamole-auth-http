@@ -82,11 +82,6 @@ public class HttpAuthenticationProvider extends SimpleAuthenticationProvider {
 			return null;
 		}
 
-		if (null == credentials.getPassword() || 0 == credentials.getPassword().length()) {
-			logger.info("Invalid password");
-			return null;
-		}
-
 		Map<String, GuacamoleConfiguration> configs = new TreeMap<String, GuacamoleConfiguration>();
 
 		try {
@@ -114,7 +109,6 @@ public class HttpAuthenticationProvider extends SimpleAuthenticationProvider {
 			// @todo Build with JSON
 			JSONObject sendJSON = new JSONObject();
 			sendJSON.put("username", credentials.getUsername());
-			sendJSON.put("password", credentials.getPassword());
 
 			DataOutputStream os = new DataOutputStream(uc.getOutputStream());
 			os.writeBytes(sendJSON.toJSONString());
