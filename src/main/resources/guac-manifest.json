@@ -1,0 +1,12 @@
+{
+
+    "guacamoleVersion" : "0.9.8",
+
+    "name"      : "REST Authentication",
+    "namespace" : "guac-auth-http",
+
+    "authProviders" : [
+        "com.edoceo.guacamole.auth.HttpAuthenticationProvider"
+    ]
+
+}
