@@ -157,6 +157,7 @@ public class HttpAuthenticationProvider extends SimpleAuthenticationProvider {
 						config.setParameter("port", json.get("port").toString());
 						config.setParameter("username", json.get("username").toString());
 						config.setParameter("password", json.get("password").toString());
+            config.setParameter("enable-printing", json.get("enable-printing").toString());
 						// config.setParameter("server-layout", json.get("server-layout").toString());
 	
 						configs.put(json.get("name").toString(), config);
